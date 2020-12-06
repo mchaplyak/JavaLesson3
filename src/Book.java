@@ -48,7 +48,10 @@ public class Book implements Printable{
         System.out.println("Book is printed");
     }
 
-    public static void printBook(String name) {
-        System.out.println(name + " is printed");
+    public static void printBook(String name, String cover) {
+        System.out.println(
+                name + " is printed \n" +
+                "Cover: " + cover
+                );
     }
 }

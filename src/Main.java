@@ -5,8 +5,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Magazine magazine1 = new Magazine("SimpleMagazine", 24);
-        Magazine magazine2 = new Magazine("BestMagazine", 36);
+        Magazine magazine1 = new Magazine("SimpleMagazine", 24, 10000);
+        Magazine magazine2 = new Magazine("BestMagazine", 36, 50000);
         Book book1 = new Book("Hardcover", "Ready Player One", 460);
         Book book2 = new Book("Paperback", "Ready Player Two", 355);
 
@@ -15,9 +15,14 @@ public class Main {
 
         for (Printable printable : printables) {
             if (printable instanceof Magazine) {
-                Magazine.printMagazines(((Magazine) printable).getName());
+                Magazine.printMagazines(
+                        ((Magazine) printable).getName(),
+                        ((Magazine) printable).getNumberOfCopies());
             } else {
-                Book.printBook(((Book) printable).getName());
+                Book.printBook(
+                        ((Book) printable).getName(),
+                        ((Book) printable).getCover()
+                );
             }
         }
 

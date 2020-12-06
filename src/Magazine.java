@@ -2,10 +2,12 @@ public class Magazine implements Printable{
 
     private String name;
     private int pages;
+    private int numberOfCopies;
 
-    public Magazine(String name, int pages) {
+    public Magazine(String name, int pages, int numberOfCopies) {
         this.name = name;
         this.pages = pages;
+        this.numberOfCopies = numberOfCopies;
     }
 
     public String getName() {
@@ -24,12 +26,23 @@ public class Magazine implements Printable{
         this.pages = pages;
     }
 
+    public int getNumberOfCopies() {
+        return numberOfCopies;
+    }
+
+    public void setNumberOfCopies(int numberOfCopies) {
+        this.numberOfCopies = numberOfCopies;
+    }
+
     @Override
     public void print() {
         System.out.println("Magazine is printed");
     }
 
-    public static void printMagazines(String name) {
-        System.out.println(name + " is printed");
+    public static void printMagazines(String name, int numberOfCopies) {
+        System.out.println(
+                name + " is printed \n" +
+                "Number Of Copies: " + numberOfCopies
+        );
     }
 }
