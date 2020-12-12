@@ -1,3 +1,5 @@
+package hw;
+
 public class Magazine implements Printable{
 
     private String name;
@@ -36,7 +38,7 @@ public class Magazine implements Printable{
 
     @Override
     public void print() {
-        System.out.println("Magazine is printed");
+        System.out.println("hw.Magazine is printed");
     }
 
     public static void printMagazines(String name, int numberOfCopies) {

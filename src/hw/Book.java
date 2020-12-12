@@ -1,3 +1,5 @@
+package hw;
+
 public class Book implements Printable{
 
     private String cover;
@@ -36,7 +38,7 @@ public class Book implements Printable{
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "hw.Book{" +
                 "cover='" + cover + '\'' +
                 ", name='" + name + '\'' +
                 ", pages=" + pages +
@@ -45,7 +47,7 @@ public class Book implements Printable{
 
     @Override
     public void print() {
-        System.out.println("Book is printed");
+        System.out.println("hw.Book is printed");
     }
 
     public static void printBook(String name, String cover) {
